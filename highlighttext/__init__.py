@@ -1,5 +1,5 @@
 # -*- coding: utf8 -*-
-#  Highlight Text plugin for Gedit
+#  Highlight Text plugin for gedit
 #
 #  Copyright (C) 2010 Derek Veit
 #
@@ -20,7 +20,7 @@
 Highlight Text plugin package
 
 2010-01-30
-Version 1.0
+Version 1.0.0
 
 Description:
 This plugin allows you to highlight all instances of the the selected text in a
@@ -35,20 +35,21 @@ Typical location:
 /usr/lib/gedit-2/plugins    (for all users)
 
 Files:
-highlighttext.gedit-plugin    -- Gedit reads this to know about the plugin.
+highlighttext.gedit-plugin    -- gedit reads this to know about the plugin.
 highlighttext/                -- Package directory
-    __init__.py               -- Package module loaded by Gedit.
+    __init__.py               -- Package module loaded by gedit.
     highlight_text.py         -- Plugin and plugin helper classes.
+    logger.py                 -- Module providing simple logging.
     gpl.txt                   -- GNU General Public License.
 
 How it loads:
-1. Gedit finds highlighttext.gedit-plugin in its plugins directory.
-2. That file tells Gedit to use Python to load the highlighttext module.
+1. gedit finds highlighttext.gedit-plugin in its plugins directory.
+2. That file tells gedit to use Python to load the highlighttext module.
 3. Python identifies the highlighttext directory as the highlighttext module.
 4. Python loads __init__.py (this file) from the highlighttext directory.
 5. This file imports the HighlightTextPlugin class from highlight_text.py.
-6. Gedit identifies HighlightTextPlugin as the gedit.Plugin object.
-7. Gedit calls methods of HighlightTextPlugin.
+6. gedit identifies HighlightTextPlugin as the gedit.Plugin object.
+7. gedit calls methods of HighlightTextPlugin.
 
 """
 from .highlight_text import HighlightTextPlugin
